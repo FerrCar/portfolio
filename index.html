@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Miei Progetti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-overlay {
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #4f46e5;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #4f46e5; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    
+    <nav class="bg-indigo-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-laptop-code text-2xl"></i>
+                <span class="font-bold text-xl">Ferrari</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-indigo-200 transition">Home</a>
+                <a href="#projects" class="hover:text-indigo-200 transition">Progetti</a>
+                <a href="#about" class="hover:text-indigo-200 transition">Su di Me</a>
+                <a href="#contact" class="hover:text-indigo-200 transition">Contattaci</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div class="md:hidden hidden bg-indigo-700 w-full px-6 py-3" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-indigo-200 transition">Home</a>
+                <a href="#projects" class="hover:text-indigo-200 transition">Progetti</a>
+                <a href="#about" class="hover:text-indigo-200 transition">Su di me</a>
+                <a href="#contact" class="hover:text-indigo-200 transition">Contattaci</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="home" class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Ciao, sono<span class="text-yellow-300">Giuseppe</span></h1>
+                <h2 class="text-2xl md:text-3xl mb-6 typewriter">Uno Studente dell'Augusto Righi</h2>
+                <p class="text-lg mb-8">Studente di scuola superiore appassionato di creazione di siti web belli e funzionali. Dai un'occhiata ai miei progetti qui sotto!</p>
+                <a href="#projects" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                    Vedi i Miei Lavori <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 bg-indigo-400 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img src="fer.png" 
+                         alt="Student Developer" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-indigo-600 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">I miei Progetti</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="ff.png" 
+                             alt="sito di E-commerce" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0">
+                            <a href="http://localhost/ferfood/fastfood.html" target="_blank" class="text-white px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">
+                                Visita Sito <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Sito di E-commerce</h3>
+                        <p class="text-gray-600 mb-4">Un negozio online di fastfood completamente reattivo con funzionalità di carrello degli acquisti.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">JS</span>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="ai.png" 
+                             alt="UDA" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0">
+                            <a href="http://localhost:3000/index.html" target="_blank" class="text-white px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">
+                                Visita il Sito <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">UDA Scuola</h3>
+                        <p class="text-gray-600 mb-4">Sito di educazione civica su un chatbot che risponde solo a domande su di essa.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">HTML/JS</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="RO.png" 
+                             alt="Realta" class="w-full h-full object-cover">
+                        <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0">
+                            <a href="http://localhost/compito/COMPITO%20DI%20REALTA%20FINITO/index.php" target="_blank" class="text-white px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">
+                                Visita il Sito <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Compito di Realta'</h3>
+                        <p class="text-gray-600 mb-4">Compito di Realta' su un sito di cartelle cliniche.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">HTML/JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Mysql</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Su di Me</h2>
+                    <p class="text-gray-600 mb-4">
+                        Sono uno studente di 18 anni con la passione per lo sviluppo web. Ho iniziato a programmare a 15 anni e da allora ho continuato a creare siti web.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Quando non sono a scuola, mi piace dare il mio contributo a progetti open source e aiutare amici in proggetti di programmazione a scuola.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Il mio obiettivo è continuare a migliorare le mie competenze. Credo che il web sia la piattaforma più accessibile per creare strumenti significativi che possano aiutare le persone.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-indigo-100 text-indigo-600 p-3 rounded-full hover:bg-indigo-200 transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-indigo-100 text-indigo-600 p-3 rounded-full hover:bg-indigo-200 transition">
+                            <i class="fab fa-codepen text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-indigo-100 text-indigo-600 p-3 rounded-full hover:bg-indigo-200 transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-indigo-100 text-indigo-600 p-3 rounded-full hover:bg-indigo-200 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-indigo-50 p-8 rounded-xl shadow-lg max-w-md">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Skill</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">HTML/CSS</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">JavaScript</span>
+                                    <span class="text-gray-500">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">PHP</span>
+                                    <span class="text-gray-500">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Node.js</span>
+                                    <span class="text-gray-500">35%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Entra in Contatto</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-indigo-600 text-white p-8">
+                        <h3 class="text-2xl font-bold mb-6">Informazioni di Contatto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4 text-indigo-200"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-indigo-100">ferrari.giuseppe@itirighi.edu.it</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-4 text-indigo-200"></i>
+                                <div>
+                                    <h4 class="font-semibold">Telefono</h4>
+                                    <p class="text-indigo-100">+39 339 197 8261</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4 text-indigo-200"></i>
+                                <div>
+                                    <h4 class="font-semibold">Scuola</h4>
+                                    <p class="text-indigo-100">I.T.I.S. Augusto Righi, Viale Kennedy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <h4 class="font-semibold mb-4"></h4>
+                            <div class="flex space-x-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Mandami un messaggio</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Messaggio</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 w-full">
+                                Invia <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-laptop-code text-2xl text-indigo-400"></i>
+                        <span class="font-bold text-xl">Ferrari</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Studente di scuola superiore e sviluppatore web</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+                    <a href="#projects" class="hover:text-indigo-400 transition">Progetti</a>
+                    <a href="curriculum.html" class="hover:text-indigo-400 transition">CV</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition">Contattaci</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Ferrari. All rights reserved. Fatto col <i class="fas fa-heart text-red-400"></i> Da uno Studente.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+       
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    fetch('send_email.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log("Risposta dal server:", result); 
+        if (result.trim() === 'success') {
+            contactForm.reset(); 
+        } else {
+            console.error("Errore dal server:", result);
+        }
+    })
+    .catch(error => {
+        console.error("Errore di rete:", error);
+    });
+});
+
+
+
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+               
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
